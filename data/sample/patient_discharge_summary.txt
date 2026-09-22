@@ -1,0 +1,34 @@
+PATIENT DISCHARGE SUMMARY
+
+Patient Name: John Doe (Anonymized)
+Age: 68
+Gender: Male
+Admission Date: Oct 12, 2026
+Discharge Date: Oct 15, 2026
+
+ADMISSION DIAGNOSIS:
+1. Acute Exacerbation of Congestive Heart Failure (HFrEF)
+2. Uncontrolled Type 2 Diabetes Mellitus
+3. Chronic Kidney Disease (Stage 3a)
+
+HISTORY OF PRESENT ILLNESS:
+The patient presented to the emergency department with progressive shortness of breath, orthopnea, and 3+ bilateral lower extremity edema over the past week. He reported gaining 8 pounds in 5 days.
+
+HOSPITAL COURSE:
+Patient was admitted for diuresis with IV Furosemide. His weight decreased by 9 lbs and his breathing improved significantly. His blood glucose was elevated on admission (245 mg/dL), so his Metformin was held, and he was temporarily placed on a sliding scale insulin regimen. Due to his history of HFrEF, his home medication of Verapamil was discontinued by cardiology. 
+
+DISCHARGE MEDICATIONS:
+1. Furosemide 40 mg PO daily (Take in the morning)
+2. Carvedilol 12.5 mg PO twice daily
+3. Entresto (Sacubitril/Valsartan) 24/26 mg PO twice daily
+4. Empagliflozin 10 mg PO daily
+5. Metformin 1000 mg PO twice daily (Resumed at discharge)
+6. Ibuprofen 400 mg PO PRN for joint pain (Patient requested for knee pain)
+
+DISCHARGE INSTRUCTIONS & FOLLOW-UP:
+- Follow up with Cardiology in 1 week.
+- Monitor daily weights. Call the clinic if weight increases by >3 lbs in a day or 5 lbs in a week.
+- Maintain a low sodium diet (< 2000 mg/day).
+
+PENDING LABS:
+HbA1c drawn on the day of discharge, results pending. Renal panel to be repeated at next follow-up.

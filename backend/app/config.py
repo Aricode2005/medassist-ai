@@ -10,11 +10,16 @@ class Settings(BaseSettings):
     # API Keys
     OPENAI_API_KEY: str = ""
     GOOGLE_API_KEY: str = ""
+    GROQ_API_KEY: str = ""
+    HF_TOKEN: str = ""
     
     # LLM Config
-    LLM_PROVIDER: str = "google"  # "openai" or "google"
-    LLM_MODEL: str = "gemini-2.0-flash"  # or "gpt-4o-mini"
-    EMBEDDING_MODEL: str = "models/text-embedding-004"
+    LLM_PROVIDER: str = "huggingface"  # "ollama", "groq", "openai", "google", or "huggingface"
+    LLM_MODEL: str = "Qwen/Qwen2.5-72B-Instruct"
+    
+    # Embedding Config
+    EMBEDDING_PROVIDER: str = "google" # "ollama", "google", "openai"
+    EMBEDDING_MODEL: str = "gemini-embedding-001"
     
     # Vector Store
     CHROMA_PERSIST_DIR: str = "./data/chromadb"

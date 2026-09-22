@@ -1,0 +1,262 @@
+CLINICAL PHARMACOLOGY REFERENCE GUIDE
+========================================
+
+METFORMIN HYDROCHLORIDE (Glucophage)
+--------------------------------------
+
+1. INDICATIONS AND USAGE
+Metformin hydrochloride is indicated as an adjunct to diet and exercise to improve glycemic
+control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus.
+
+2. DOSAGE AND ADMINISTRATION
+- Adults: Initial dose 500 mg orally twice daily or 850 mg once daily with meals
+- Maximum recommended daily dose: 2550 mg for adults
+- Pediatric (10-16 years): Initial dose 500 mg twice daily, maximum 2000 mg/day
+- Dose should be increased gradually to reduce gastrointestinal side effects
+
+3. CONTRAINDICATIONS
+- Severe renal impairment (eGFR below 30 mL/min/1.73 m2)
+- Known hypersensitivity to metformin
+- Acute or chronic metabolic acidosis, including diabetic ketoacidosis
+
+4. WARNINGS AND PRECAUTIONS
+
+4.1 Lactic Acidosis
+WARNING: Lactic acidosis is a rare but serious complication that can occur due to metformin
+accumulation. The risk increases with conditions such as sepsis, dehydration, excess alcohol
+intake, hepatic impairment, renal impairment, and acute congestive heart failure.
+Symptoms include malaise, myalgias, respiratory distress, somnolence, and nonspecific
+abdominal distress. Laboratory findings include low pH, elevated blood lactate, and
+increased anion gap.
+
+4.2 Vitamin B12 Deficiency
+Long-term treatment with metformin has been associated with decreased serum vitamin B12
+levels. Periodic measurement of hematologic parameters and vitamin B12 levels is recommended,
+particularly in patients with peripheral neuropathy or anemia.
+
+4.3 Hypoglycemia
+Metformin alone does not usually cause hypoglycemia, but it may occur when used in combination
+with other glucose-lowering agents such as sulfonylureas or insulin.
+
+5. DRUG INTERACTIONS
+
+5.1 Carbonic Anhydrase Inhibitors (e.g., Topiramate, Zonisamide)
+Concurrent use may increase the risk of lactic acidosis. Monitor patients more frequently.
+
+5.2 Cationic Drugs (e.g., Amiloride, Digoxin, Morphine, Quinidine, Ranitidine, Vancomycin)
+These drugs may compete with metformin for renal tubular transport, potentially increasing
+metformin plasma concentration. Monitor closely and adjust dose if necessary.
+
+5.3 Alcohol
+Alcohol potentiates the effect of metformin on lactate metabolism. Patients should be warned
+against excessive alcohol intake while receiving metformin.
+
+5.4 Iodinated Contrast Agents
+Metformin should be temporarily discontinued at the time of or prior to iodinated contrast
+imaging procedures in patients with eGFR between 30-60 mL/min/1.73 m2.
+
+6. ADVERSE REACTIONS
+Most common adverse reactions (incidence > 5%):
+- Diarrhea (53.2%)
+- Nausea/Vomiting (25.5%)
+- Flatulence (12.1%)
+- Abdominal discomfort (6.4%)
+- Indigestion (7.1%)
+- Asthenia (9.2%)
+- Headache (5.7%)
+
+========================================
+
+ATORVASTATIN CALCIUM (Lipitor)
+--------------------------------------
+
+1. INDICATIONS AND USAGE
+Atorvastatin is indicated as an adjunct to diet for treatment of elevated total cholesterol,
+LDL-C, apolipoprotein B, and triglycerides in patients with primary hyperlipidemia and
+mixed dyslipidemia. Also indicated for prevention of cardiovascular disease in patients
+with multiple risk factors.
+
+2. DOSAGE AND ADMINISTRATION
+- Adults: Initial dose 10-20 mg once daily
+- Patients requiring large LDL-C reduction (>45%): 40 mg once daily
+- Maximum dose: 80 mg once daily
+- Can be taken at any time of day, with or without food
+
+3. CONTRAINDICATIONS
+- Active liver disease or unexplained persistent elevations of hepatic transaminase levels
+- Known hypersensitivity to any component of this medication
+- Pregnancy and lactation - may cause fetal harm
+
+4. WARNINGS AND PRECAUTIONS
+
+4.1 Skeletal Muscle Effects (Myopathy/Rhabdomyolysis)
+WARNING: Rare cases of rhabdomyolysis with acute renal failure secondary to myoglobinuria
+have been reported. Risk factors include advanced age (>65), uncontrolled hypothyroidism,
+renal impairment, and concomitant use of certain medications.
+Patients should be advised to report promptly unexplained muscle pain, tenderness, or weakness.
+
+4.2 Liver Enzyme Abnormalities
+Increases in serum transaminases (AST/ALT) have been reported. Liver function tests should
+be performed before initiating therapy and as clinically indicated thereafter.
+
+4.3 Endocrine Function
+Increases in HbA1c and fasting serum glucose levels have been reported with HMG-CoA
+reductase inhibitors, including atorvastatin.
+
+5. DRUG INTERACTIONS
+
+5.1 Strong CYP3A4 Inhibitors (e.g., Clarithromycin, Itraconazole, HIV Protease Inhibitors)
+Concomitant use increases the risk of myopathy and rhabdomyolysis. Avoid or limit atorvastatin
+dose to 20 mg daily when used with strong CYP3A4 inhibitors.
+
+5.2 Cyclosporine, Gemfibrozil, or Niacin
+The risk of myopathy is increased. Atorvastatin dose should not exceed 10 mg daily when
+used concomitantly with cyclosporine.
+
+5.3 Warfarin
+Atorvastatin may increase INR values in patients receiving warfarin. Monitor prothrombin time
+before and frequently during early atorvastatin therapy.
+
+5.4 Digoxin
+Co-administration increases digoxin steady-state plasma concentrations by approximately 20%.
+Monitor digoxin levels when initiating atorvastatin.
+
+5.5 Oral Contraceptives
+Co-administration increases norethindrone and ethinyl estradiol AUC values by approximately
+30% and 20%, respectively. Consider these increases when selecting an oral contraceptive.
+
+6. ADVERSE REACTIONS
+Most common adverse reactions (incidence >= 2%):
+- Nasopharyngitis (8.3%)
+- Arthralgia (6.9%)
+- Diarrhea (6.8%)
+- Pain in extremity (6.0%)
+- Urinary tract infection (5.7%)
+- Dyspepsia (4.7%)
+- Nausea (4.0%)
+- Musculoskeletal pain (3.8%)
+- Muscle spasms (3.6%)
+- Myalgia (3.5%)
+- Insomnia (3.0%)
+- Pharyngolaryngeal pain (2.3%)
+
+========================================
+
+AMLODIPINE BESYLATE (Norvasc)
+--------------------------------------
+
+1. INDICATIONS AND USAGE
+Amlodipine is a calcium channel blocker indicated for the treatment of:
+- Hypertension (may be used alone or in combination with other antihypertensive agents)
+- Chronic stable angina
+- Vasospastic angina (Prinzmetal's angina)
+- Angiographically documented coronary artery disease in patients without heart failure
+
+2. DOSAGE AND ADMINISTRATION
+- Hypertension: Initial dose 5 mg once daily, maximum 10 mg once daily
+- Angina: 5-10 mg once daily
+- Elderly or hepatic impairment: Initial dose 2.5 mg once daily
+- Small, fragile patients: Initial dose 2.5 mg once daily
+
+3. DRUG INTERACTIONS
+
+3.1 Simvastatin
+Co-administration with amlodipine increases exposure to simvastatin. Limit simvastatin
+dose to 20 mg daily in patients taking amlodipine.
+
+3.2 Cyclosporine
+Co-administration increases cyclosporine exposure. Monitor cyclosporine levels and adjust
+dose as necessary.
+
+3.3 CYP3A4 Inhibitors
+Co-administration with moderate or strong CYP3A4 inhibitors (e.g., diltiazem, ketoconazole)
+may increase amlodipine plasma concentrations. Monitor for symptoms of hypotension and edema.
+
+4. ADVERSE REACTIONS
+Most common adverse reactions (incidence > 2%):
+- Edema (peripheral) (8.3%)
+- Dizziness (3.4%)
+- Flushing (2.6%)
+- Palpitation (4.5%)
+- Fatigue (4.5%)
+- Nausea (2.9%)
+- Abdominal pain (1.6%)
+- Somnolence (1.4%)
+
+========================================
+
+CLINICAL GUIDELINES: TYPE 2 DIABETES MANAGEMENT
+--------------------------------------------------
+
+SCREENING AND DIAGNOSIS
+- Fasting plasma glucose >= 126 mg/dL (7.0 mmol/L) on two occasions
+- HbA1c >= 6.5% (48 mmol/mol)
+- 2-hour plasma glucose >= 200 mg/dL during oral glucose tolerance test
+- Random plasma glucose >= 200 mg/dL with classic hyperglycemia symptoms
+
+TREATMENT ALGORITHM
+
+Step 1: Lifestyle Modifications
+- Medical nutrition therapy and weight management
+- Physical activity: minimum 150 minutes/week of moderate-intensity exercise
+- Diabetes self-management education and support (DSMES)
+
+Step 2: First-Line Pharmacotherapy
+- Metformin is recommended as first-line therapy unless contraindicated
+- Starting dose: 500 mg twice daily with meals
+- Titrate over 1-2 months to minimize GI side effects
+
+Step 3: Combination Therapy (if HbA1c target not achieved after 3 months)
+Add one of the following to metformin:
+- GLP-1 receptor agonists (e.g., Semaglutide, Liraglutide) - preferred if CVD or weight concerns
+- SGLT2 inhibitors (e.g., Empagliflozin, Dapagliflozin) - preferred if heart failure or CKD
+- DPP-4 inhibitors (e.g., Sitagliptin, Saxagliptin)
+- Sulfonylureas (e.g., Glimepiride, Glipizide) - if cost is a concern
+- Thiazolidinediones (e.g., Pioglitazone)
+- Basal insulin (e.g., Insulin Glargine, Insulin Detemir)
+
+Step 4: Intensification
+- Consider triple therapy or insulin-based regimens
+- If on basal insulin, add prandial insulin (basal-bolus regimen)
+
+GLYCEMIC TARGETS
+- General adult population: HbA1c < 7.0% (53 mmol/mol)
+- Elderly/frail or high hypoglycemia risk: HbA1c < 8.0% (64 mmol/mol)
+- Younger patients without complications: HbA1c < 6.5% (48 mmol/mol)
+- Pre-prandial glucose: 80-130 mg/dL (4.4-7.2 mmol/L)
+- Peak postprandial glucose: < 180 mg/dL (< 10.0 mmol/L)
+
+MONITORING
+- HbA1c: Every 3 months until stable, then every 6 months
+- Self-monitoring of blood glucose (SMBG) as recommended
+- Annual comprehensive metabolic panel
+- Annual lipid panel
+- Annual microalbumin/creatinine ratio
+- Eye exam: At diagnosis and annually thereafter
+- Foot exam: At every visit
+- Blood pressure: At every visit, target < 130/80 mmHg
+
+CARDIOVASCULAR RISK MANAGEMENT
+- Statin therapy recommended for most adults with diabetes aged 40-75
+- Aspirin 75-162 mg/day for secondary prevention
+- ACE inhibitor or ARB for patients with albuminuria
+- Blood pressure target: < 130/80 mmHg
+
+========================================
+
+COMMON DRUG INTERACTIONS IN CLINICAL PRACTICE - SUMMARY TABLE
+
+Drug A          | Drug B              | Effect                          | Severity
+----------------|---------------------|--------------------------------|----------
+Warfarin        | Aspirin             | Increased bleeding risk         | HIGH
+Warfarin        | Atorvastatin        | Increased INR                   | MODERATE
+Metformin       | Alcohol             | Lactic acidosis risk            | HIGH
+Metformin       | Contrast dye        | Renal impairment risk           | HIGH
+Amlodipine      | Simvastatin         | Increased statin exposure       | MODERATE
+Atorvastatin    | Clarithromycin      | Myopathy/rhabdomyolysis risk    | HIGH
+Atorvastatin    | Cyclosporine        | Myopathy risk                   | HIGH
+ACE Inhibitors  | Potassium suppl.    | Hyperkalemia                    | HIGH
+ACE Inhibitors  | NSAIDs              | Reduced antihypertensive effect | MODERATE
+Digoxin         | Atorvastatin        | Increased digoxin levels        | MODERATE
+Insulin         | Sulfonylureas       | Hypoglycemia                    | HIGH
+Metformin       | Topiramate          | Lactic acidosis risk            | MODERATE

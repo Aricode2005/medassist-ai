@@ -16,8 +16,8 @@ build/
 .env.local
 
 # Data
-data/chromadb/
-data/uploads/
+backend/data/chromadb/
+backend/data/uploads/
 
 # Node
 node_modules/

@@ -1,0 +1,39 @@
+services:
+  # Backend FastAPI Service
+  - type: web
+    name: medassist-api
+    env: python
+    buildCommand: "cd backend && pip install -r requirements.txt"
+    startCommand: "cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: LLM_PROVIDER
+        value: huggingface
+      - key: LLM_MODEL
+        value: Qwen/Qwen2.5-72B-Instruct
+      - key: EMBEDDING_PROVIDER
+        value: google
+      - key: EMBEDDING_MODEL
+        value: gemini-embedding-001
+      - key: HF_TOKEN
+        sync: false # Set this in Render dashboard
+      - key: GOOGLE_API_KEY
+        sync: false # Set this in Render dashboard
+      - key: GROQ_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+
+  # Frontend React App (Static Site)
+  - type: web
+    name: medassist-ui
+    env: static
+    buildCommand: "cd frontend && npm install && npm run build"
+    staticPublishPath: "./frontend/dist"
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: medassist-api
+          envVarKey: RENDER_EXTERNAL_URL

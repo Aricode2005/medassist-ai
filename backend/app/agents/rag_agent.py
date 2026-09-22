@@ -1,6 +1,8 @@
-from typing import List
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_openai import ChatOpenAI
+from langchain_ollama import ChatOllama
+from langchain_groq import ChatGroq
+from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.messages import HumanMessage, SystemMessage
 from app.config import settings
@@ -10,7 +12,27 @@ from app.models.schemas import Source
 
 def get_llm():
     """Get LLM based on configuration."""
-    if settings.LLM_PROVIDER == "google":
+    if settings.LLM_PROVIDER == "huggingface":
+        llm = HuggingFaceEndpoint(
+            repo_id=settings.LLM_MODEL,
+            huggingfacehub_api_token=settings.HF_TOKEN,
+            task="text-generation",
+            max_new_tokens=1024,
+            do_sample=False,
+        )
+        return ChatHuggingFace(llm=llm)
+    elif settings.LLM_PROVIDER == "groq":
+        return ChatGroq(
+            model=settings.LLM_MODEL,
+            api_key=settings.GROQ_API_KEY,
+            temperature=0.3
+        )
+    elif settings.LLM_PROVIDER == "ollama":
+        return ChatOllama(
+            model=settings.LLM_MODEL,
+            temperature=0.3
+        )
+    elif settings.LLM_PROVIDER == "google":
         return ChatGoogleGenerativeAI(
             model=settings.LLM_MODEL,
             google_api_key=settings.GOOGLE_API_KEY,
@@ -68,6 +90,14 @@ async def query_with_rag(query: str) -> dict:
     messages = prompt.format_messages()
     response = await llm.ainvoke(messages)
     
+    # Extract text from response (handles both string and list formats)
+    response_text = response.content
+    if isinstance(response_text, list):
+        response_text = "\n".join(
+            block.get("text", "") if isinstance(block, dict) else str(block)
+            for block in response_text
+        )
+    
     # Build sources list
     sources = []
     for doc, score in retrieved_docs:
@@ -89,7 +119,7 @@ async def query_with_rag(query: str) -> dict:
     ]
     
     return {
-        "response": response.content,
+        "response": response_text,
         "sources": sources,
         "confidence": round(min(avg_relevance + 0.1, 1.0), 3),
         "reasoning_steps": reasoning_steps
