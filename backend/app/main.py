@@ -23,7 +23,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Include routers
+
+@app.get("/")
+async def root():
+    return {"message": "MedAssist API is running. Please use the frontend UI to interact with the application."}
+
+
+# Mount routers
 app.include_router(chat.router)
 app.include_router(documents.router)
 app.include_router(analytics.router)
