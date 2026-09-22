@@ -25,6 +25,7 @@ app.add_middleware(
 
 
 @app.get("/")
+@app.head("/")
 async def root():
     return {"message": "MedAssist API is running. Please use the frontend UI to interact with the application."}
 
