@@ -1,73 +1,59 @@
 <div align="center">
+  <img src="https://img.icons8.com/color/96/000000/medical-doctor.png" alt="MedAssist AI Logo">
+  <h1>MedAssist AI 🧬</h1>
+  <p><strong>Agentic Clinical Document Analysis & Medical Decision Support System</strong></p>
 
-# 🏥 MedAssist AI
-
-### Intelligent Clinical Document Assistant
-
-*AI-powered multi-agent system for healthcare document analysis using RAG and clinical reasoning*
-
-[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
-[![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react&logoColor=black)](https://react.dev)
-[![LangChain](https://img.shields.io/badge/LangChain-0.3-1C3C3C?logo=langchain&logoColor=white)](https://langchain.com)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
-[Features](#-features) • [Architecture](#-architecture) • [Quick Start](#-quick-start) • [Deployment](#-deployment) • [API Docs](#-api-documentation)
-
+  <p>
+    <a href="#features">Features</a> •
+    <a href="#architecture">Agentic Architecture</a> •
+    <a href="#quick-start">Quick Start</a> •
+    <a href="#supported-models">Supported Models</a> •
+    <a href="#deployment">Deployment</a>
+  </p>
 </div>
 
 ---
 
+**MedAssist AI** is an advanced, multi-agent Retrieval-Augmented Generation (RAG) platform designed to ingest clinical documents (guidelines, discharge summaries, pharmacology notes) and provide intelligent, context-aware medical insights.
+
+Instead of a single monolithic LLM, MedAssist uses an **Agentic Orchestrator** to route queries between specialized agents—ensuring clinical reasoning tasks are handled with high precision and guardrails, while general information retrieval is handled by a high-speed RAG agent.
+
 ## ✨ Features
 
-| Feature | Description |
-|---------|-------------|
-| 🤖 **Multi-Agent AI** | Intelligent orchestrator routes queries to specialized RAG and Clinical agents |
-| 🔍 **RAG Pipeline** | Advanced Retrieval-Augmented Generation with ChromaDB vector store |
-| 🧬 **Clinical Reasoning** | Drug interaction analysis, symptom cross-referencing, guideline compliance |
-| 📄 **Document Ingestion** | Upload PDFs, TXT, CSV, Markdown — auto-chunked and embedded |
-| 📊 **Analytics Dashboard** | Real-time usage metrics, confidence tracking, agent usage charts |
-| 🎨 **Modern UI** | Glassmorphism design with smooth animations, dark mode, responsive |
-| 📑 **Source Citations** | Every response includes cited sources with relevance scores |
-| 🧠 **Reasoning Transparency** | View step-by-step reasoning for every AI response |
+- 🧠 **Multi-Agent Orchestration**: Dynamically routes queries between a RAG Information Agent and a specialized Clinical Reasoning Agent.
+- 📚 **Document Ingestion**: Seamlessly upload `.txt`, `.md`, `.pdf`, and `.csv` medical documents.
+- ⚡ **Lightning Fast RAG**: Powered by ChromaDB vector search and state-of-the-art embedding models.
+- 🌍 **Multi-LLM Support**: Built-in integrations for **Hugging Face (Serverless Inference)**, **Groq**, **Google Gemini**, **Ollama (Local)**, and **OpenAI**.
+- 🛡️ **Clinical Guardrails**: Specialized prompts to detect drug interactions, contraindications, and provide transparent citations.
+- 📊 **Analytics Dashboard**: Monitor document count, vector store health, and LLM configuration at a glance.
+- 💅 **Modern Glassmorphism UI**: Beautiful, responsive React frontend powered by TailwindCSS and Framer Motion.
 
-## 🏗️ Architecture
+---
 
-```
-┌─────────────────┐     ┌──────────────────────────────────────┐
-│                  │     │           FastAPI Backend             │
-│   React +        │────▶│                                      │
-│   Tailwind CSS   │     │  ┌──────────────────────────────┐   │
-│   Frontend       │◀────│  │     Orchestrator Agent        │   │
-│                  │     │  │  ┌─────────┐  ┌────────────┐ │   │
-└─────────────────┘     │  │  │RAG Agent│  │Clinical    │ │   │
-                         │  │  │         │  │Agent       │ │   │
-                         │  │  └────┬────┘  └─────┬──────┘ │   │
-                         │  └───────┼─────────────┼────────┘   │
-                         │          │             │             │
-                         │  ┌───────▼─────────────▼────────┐   │
-                         │  │     ChromaDB Vector Store     │   │
-                         │  └──────────────────────────────┘   │
-                         └──────────────────────────────────────┘
-```
+## 🤖 Agentic Architecture
 
-## 🚀 Quick Start
+MedAssist AI utilizes a multi-agent system powered by LangChain:
+
+1. **Orchestrator Agent**: Acts as the triage nurse. Analyzes the user's query and decides which specialized agent is best equipped to handle it.
+2. **RAG Agent**: The researcher. Searches ChromaDB for relevant clinical guidelines, extracts exact quotes, and synthesizes summaries.
+3. **Clinical Reasoning Agent**: The specialist. Focuses on patient safety, cross-referencing patient symptoms with pharmacology documents, and explicitly identifying dangerous drug interactions (e.g., NSAIDs + ACE Inhibitors).
+
+---
+
+## 🚀 Quick Start (Local Setup)
 
 ### Prerequisites
-
-- Python 3.11+
-- Node.js 18+
-- A Google AI API key (free) OR OpenAI API key
+- **Python 3.11+**
+- **Node.js 18+**
+- API Key from Hugging Face, Groq, Google, or OpenAI (See [Supported Models](#supported-models)).
 
 ### 1. Clone the Repository
-
 ```bash
 git clone https://github.com/yourusername/medassist-ai.git
 cd medassist-ai
 ```
 
-### 2. Setup Backend
-
+### 2. Setup Backend & Environment
 ```bash
 cd backend
 python -m venv venv
@@ -80,161 +66,85 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Configure Environment Variables
-
+Create a `.env` file in the `backend` folder:
 ```bash
 cp .env.example .env
 ```
+Edit the `.env` to configure your preferred LLM. *(Default is Hugging Face Qwen 72B + Google Embeddings).*
 
-Edit `.env` and add your API key:
-
-```env
-# Option A: Google Gemini (Recommended - Free tier available)
-LLM_PROVIDER=google
-GOOGLE_API_KEY=your_google_api_key_here
-
-# Option B: OpenAI
-# LLM_PROVIDER=openai
-# OPENAI_API_KEY=your_openai_api_key_here
-```
-
-**Where to get API keys:**
-- 🔵 **Google Gemini** (Recommended): https://aistudio.google.com/apikey — Free tier with generous limits
-- 🟢 **OpenAI**: https://platform.openai.com/api-keys — Requires payment
-
-### 4. Start Backend
-
+### 3. Start the Backend API
 ```bash
 uvicorn app.main:app --reload --port 8000
 ```
+*API will be available at `http://localhost:8000`. You can view interactive API docs at `http://localhost:8000/api/docs`.*
 
-### 5. Setup Frontend
-
+### 4. Start the Frontend
+Open a new terminal window:
 ```bash
-cd ../frontend
+cd frontend
 npm install
 npm run dev
 ```
+*UI will be available at `http://localhost:5173`.*
 
-### 6. Open the App
+### 5. Test with Sample Data
+We have provided sample clinical documents in `data/sample/`:
+- `cardiology_guidelines_2026.md`
+- `patient_discharge_summary.txt` (Contains intentional drug contraindications to test the Clinical Agent!)
 
-Visit **http://localhost:5173** in your browser! 🎉
+Upload these in the UI and ask: *"Review John Doe's discharge medications. Are there any dangerous drug interactions based on the guidelines?"*
 
-## 🚢 Deployment on Railway
+---
 
-### Quick Deploy
+## 🔌 Supported Models & Providers
 
-1. **Push to GitHub** — Push your code to a GitHub repository
+MedAssist AI is designed to be highly flexible. You can mix and match LLM providers and Embedding providers in your `.env` file.
 
-2. **Create Railway Project**
-   - Go to [railway.app](https://railway.app)
-   - Click "New Project" → "Deploy from GitHub repo"
-   - Select your repository
+| Provider | Purpose | Setup |
+|----------|---------|-------|
+| **Hugging Face** | LLM | Free Serverless API. Set `LLM_PROVIDER=huggingface`, `LLM_MODEL=Qwen/Qwen2.5-72B-Instruct`, and provide `HF_TOKEN`. |
+| **Google Gemini** | LLM & Embeddings | Extremely fast and free tier available. Excellent for `EMBEDDING_PROVIDER=google`. |
+| **Groq** | LLM | Lightning-fast LPU inference. Set `LLM_PROVIDER=groq`. (Requires separate embedding provider like Google or Ollama). |
+| **Ollama** | Local LLM & Embed | 100% private and offline. Install Ollama and pull `llama3.2` and `nomic-embed-text`. |
+| **OpenAI** | LLM & Embeddings | Enterprise standard. Set `LLM_PROVIDER=openai`. |
 
-3. **Set Environment Variables** in Railway dashboard:
-   ```
-   LLM_PROVIDER=google
-   GOOGLE_API_KEY=your_key_here
-   PORT=8000
-   ```
+---
 
-4. **Build Frontend for Production**
-   ```bash
-   cd frontend
-   # Set the API URL to your Railway backend URL
-   VITE_API_URL=https://your-app.railway.app npm run build
-   # Copy build output to backend static folder
-   cp -r dist ../backend/static
-   ```
+## ☁️ Deployment (Render.com)
 
-5. **Deploy** — Railway auto-deploys on git push!
+MedAssist AI is fully configured for deployment on Render's free tier! 
 
-### Docker Deployment
+### Option 1: Automated Blueprint (Infrastructure as Code)
+1. Push this repository to GitHub.
+2. Go to your Render Dashboard -> **New +** -> **Blueprint**.
+3. Connect your GitHub repository. Render will read the `render.yaml` file and automatically spin up the Backend Docker container and the Frontend Static Site.
+4. Input your `HF_TOKEN` and `GOOGLE_API_KEY` when prompted.
 
-```bash
-# Build and run with Docker Compose
-docker-compose up --build
+### Option 2: Manual Deployment
+**Backend (Web Service):**
+1. New + -> Web Service -> Connect Repo.
+2. Name: `medassist-api`.
+3. Runtime: **Docker**.
+4. Add environment variables from your `.env` file.
 
-# Access at http://localhost:3000
-```
+**Frontend (Static Site):**
+1. New + -> Static Site -> Connect Repo.
+2. Name: `medassist-ui`.
+3. Build Command: `cd frontend && npm install && npm run build`
+4. Publish Directory: `frontend/dist`
+5. Add Environment Variable: `VITE_API_URL` = `https://medassist-api-YOUR-ID.onrender.com` (Your backend URL).
 
-## 📡 API Documentation
-
-Once running, access the interactive API docs:
-- **Swagger UI**: http://localhost:8000/api/docs
-- **ReDoc**: http://localhost:8000/api/redoc
-
-### Key Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `POST` | `/api/chat` | Send a query and get AI response |
-| `GET` | `/api/chat/history` | Get chat history |
-| `POST` | `/api/documents/upload` | Upload a document |
-| `GET` | `/api/documents` | List all documents |
-| `DELETE` | `/api/documents/{id}` | Delete a document |
-| `GET` | `/api/analytics/stats` | Get usage analytics |
-| `GET` | `/api/health` | Health check |
+---
 
 ## 🛠️ Tech Stack
 
-| Layer | Technology |
-|-------|------------|
-| **Backend** | Python 3.11, FastAPI, Uvicorn |
-| **AI/LLM** | LangChain, Google Gemini / OpenAI GPT |
-| **Vector DB** | ChromaDB with persistent storage |
-| **Embeddings** | Google text-embedding-004 / OpenAI text-embedding-3-small |
-| **Frontend** | React 18, Tailwind CSS, Framer Motion |
-| **Charts** | Recharts |
-| **Deployment** | Docker, Railway |
-
-## 📁 Project Structure
-
-```
-medassist-ai/
-├── backend/
-│   ├── app/
-│   │   ├── agents/          # AI agents (orchestrator, RAG, clinical)
-│   │   ├── models/          # Pydantic schemas
-│   │   ├── rag/             # RAG pipeline (embeddings, vectorstore)
-│   │   ├── routers/         # API route handlers
-│   │   ├── config.py        # App configuration
-│   │   └── main.py          # FastAPI application
-│   ├── requirements.txt
-│   ├── Dockerfile
-│   └── .env.example
-├── frontend/
-│   ├── src/
-│   │   ├── components/      # React components
-│   │   ├── services/        # API service layer
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   ├── package.json
-│   └── Dockerfile
-├── data/                    # Document storage
-├── docker-compose.yml
-├── railway.toml
-└── README.md
-```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License.
+- **Backend:** Python, FastAPI, Uvicorn, LangChain
+- **Vector Database:** ChromaDB
+- **Frontend:** React, Vite, Tailwind CSS, Framer Motion, Axios
+- **Deployment:** Docker, Render YAML
 
 ---
 
 <div align="center">
-
-**Built with ❤️ for healthcare innovation**
-
-*Disclaimer: MedAssist AI is a tool for information retrieval and should not be used as a substitute for professional medical advice.*
-
+  <i>Disclaimer: MedAssist AI is an experimental AI tool designed for educational, research, and demonstration purposes. It should not be used as a substitute for professional medical advice, diagnosis, or treatment.</i>
 </div>
